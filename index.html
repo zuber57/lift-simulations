@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lift Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- container  -->
+    <div id="container">
+        <h1>Lift Simulation</h1>
+        <div class="lift-floor-gen">
+            <button class="btn add-floor">Add Floors</button>
+            <button class="btn add-lift">Add Lifts</button>
+        </div>
+        <!-- banner for space -->
+        <div class="banner">
+            <p class="error-banner">Not Enough space left ! ! ! </p>
+        </div>
+        <!-- floors container -->
+        <div class="floors">
+            <div class="floor-container">
+                <div class="btn-container">
+                    <button class="lift-btn down-btn 0">Down</button>
+                </div>
+                <!-- lift container -->
+                <div class="lift-container">
+                    <div class="lift-doors">
+                        <div class="door left-door"></div>
+                        <div class="door right-door"></div>
+                    </div>
+                </div>
+                
+                <div class="floor">
+                    <div class="floor-base"></div>
+                </div>
+                <h3 class="floor-number">Floor 0</h3>
+            </div>
+        </div>
+            
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

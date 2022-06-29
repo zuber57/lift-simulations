@@ -1,0 +1,162 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+button{
+    font: inherit;
+}
+#container, .floors{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    margin: 1rem;
+}
+.lift-floor-gen{
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    background-color: transparent;
+    padding: 5px 15px;
+    margin: 5px 10px;
+    cursor: pointer;
+}
+.banner{
+    background-color: red;
+    padding: 8px 0;
+    color: white;
+    display: none;
+}
+.banner-show{
+    display: block;
+
+}
+.floor-container{
+    border: 1px solid black;
+    width: 100%;
+    min-height: 10rem;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 80% 20%;
+}
+.btn-container{
+    width: 100%;
+    grid-column: 1;
+    grid-row: 1/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.lift-btn{
+    justify-self: left;
+    align-self: center;
+    background-color: transparent;
+    width: 70px;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.floor{
+    display: flex;
+    min-width: 100%;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.floor-base{
+    background-color: black;
+    width: 100%;
+    height: 3px;
+}
+.floor-number{
+    font-weight:400;
+    grid-column: 3;
+    grid-row: 1/3;
+    align-self: center;
+    justify-self: center;
+}
+.lift-container{
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+}
+
+.lift-doors{
+    position: relative;
+    background-color: rgb(185, 117, 15);
+    height: 77px;
+    width: 50px;
+    border: 4px solid black;
+    overflow: hidden;
+    margin: 0 50px;
+}
+.door{
+    float: left;
+    position: absolute;
+    /* z-index: 2; */
+    transition: transform 2.5s linear;
+}
+.left-door{
+    background-color: rgb(99, 94, 83);
+    height: 100%;
+    width: 50%; 
+    border-right: 1px solid black;
+    
+}
+.right-door{
+    border-left: 1px solid black;
+    background-color: rgb(99, 94, 83);
+    height: 100%;
+    width: 50%;
+    left: 50%;
+}
+
+.left-door-close{
+    transform: translateX(-85%);
+}
+.right-door-close{
+    transform: translateX(85%);  
+}
+
+    .floor-number {
+        font-weight: 400;
+        grid-column: 3;
+        grid-row: 1/3;
+        align-self: center;
+        justify-self: center;
+    }
+    .lift{
+        transition: transform 2.5s linear;
+        transform: translateY(-178px);
+    }
+    
+    @media (max-width:850px) {
+        #container, #container>.floors{
+            margin: 0.3rem;
+        }
+        .btn-container{
+            margin: 0 5px;
+        }
+       .floor-container{
+        font-size: 0.7em;
+       }
+       .lift-btn{
+        width: 40px;
+       }
+       .floor-base{
+        width: 90%;
+       }
+       .lift-doors{
+        margin: 0 20px;
+       }
+    }
+    
+    
